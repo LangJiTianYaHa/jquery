@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>回到顶部</title>
+  <style>
+    #to_top {
+      width: 30px;
+      height: 40px;
+      font: 14px/20px arial;
+      text-align: center;
+      background: #06c;
+      position: fixed;
+      cursor: pointer;
+      color: #fff;
+      left: 1250px;
+      top: 500px;
+    }
+  </style>
+</head>
+<body style="height: 2000px;">
+
+<div id="to_top">返回顶部</div>
+
+<script type="text/javascript" src="JS/jquery-1.12.3.js"></script>
+<script type="text/javascript">
+/*  $('#to_top').click(function () {
+    // 瞬间滚到顶部
+    //$('html,body').scrollTop(0)
+
+    // 平滑滚到顶部
+    // 总距离
+    var $page = $('html,body')
+    var distance = $('html').scrollTop() + $('body').scrollTop()
+    // 总时间
+    var time = 500
+    // 间隔时间
+    var intervalTime = 50
+    var itemDistance = distance/(time/intervalTime)
+    // 使用循环定时器不断滚动
+    var intervalId = setInterval(function () {
+      distance -= itemDistance
+      // 到达顶部, 停止定时器
+      if(distance<=0) {
+        distance = 0 //修正
+        clearInterval(intervalId)
+      }
+      $page.scrollTop(distance)
+    }, intervalTime)
+
+  })*/
+
+  /*$('#to_top').click(function () {
+    // 瞬间滚到顶部
+    //$('html,body').scrollTop(0)
+    //总距离 总时间 间隔时间
+    var  $page = $('html,body')
+    var distance = $('html').scrollTop() + $('body').scrollTop()
+    var time = 500
+    var intervalTime  = 50
+
+    //每段的间隔距离
+    var itemDistance = distance/(time/intervalTime)
+
+    //定时器遍历
+    var intervalId = setInterval(function () {
+      //点击时距离变短
+      distance = distance - itemDistance
+
+      //修正
+      if(distance<=0){
+        distance = 0
+        clearInterval(intervalId)
+      }
+      //设置滚动的位置
+      $page.scrollTop(distance)
+    },intervalTime)
+
+  })*/
+
+  $('#to_top').click(function () {
+    //瞬间回到顶部
+    //$('html,body').scrollTop(0)
+
+    //总距离 总时间 间隔时间  每段的间隔距离  定时器遍历 //点击时距离变短  //修正  //设置滚动的位置
+
+    var $page = $('html,body')
+    var distance = $('html').scrollTop() + $('body').scrollTop()
+
+    var time = 1000
+    var intervalTime = 50
+    var itemDistance  = distance/(time/intervalTime)
+
+    var intervalId = setInterval(function () {
+       distance = distance - itemDistance
+      if(distance<=0){
+        distance = 0
+        clearInterval(intervalId)
+      }
+
+      $page.scrollTop(distance)
+    },intervalTime)
+  })
+
+
+</script>
+</body>
+
+</html>
