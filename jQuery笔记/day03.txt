@@ -1,0 +1,21 @@
+* 动画效果
+  * 在一定的时间内, 不断改变元素样式
+  * slideDown()/slideUp()/slideToggle()    滑动展开/收缩/切换（高度）
+  * fadeOut()/fadeIn()/fadeToggle()  淡出/淡入/切换 （透明度）
+  * show()/hide()/toggle()    显示/隐藏 （高度/宽度/透明度）
+  * animate({结束时的样式}, time, fun)
+  * stop()
+
+* 插件机制
+  * 扩展jQuery函数对象的方法
+    $.extend({
+      xxx: fuction () {} // this是$
+    })
+    $.xxx()
+  * 扩展jQuery对象的方法
+    $.fn.extend({
+      xxx: function(){}  // this是jQuery对象
+    })
+    $obj.xxx()
+    
+* jQuery文档的结构图
